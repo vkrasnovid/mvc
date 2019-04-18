@@ -29,11 +29,12 @@ public class EmployeeController {
 
     @PostMapping("employee/add")
     public String addEmployee(@ModelAttribute("employee") Employee employee){
-
-        if(employee.getId() == null){
-            this.employeeService.addEmployee(employee);
-        }else{
-            this.employeeService.updateEmployee(employee);
+        if (employee.getAge() != null && employee.getName() != null) {
+            if (employee.getId() == null) {
+                this.employeeService.addEmployee(employee);
+            } else {
+                this.employeeService.updateEmployee(employee);
+            }
         }
 
         return "redirect:/employees";
