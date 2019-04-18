@@ -7,11 +7,11 @@
     <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 </head>
     <body>
+    <div class="wrapper">
         <h1>Welcome!</h1>
-            <br/>
         <h1>
         <a href="<c:url value="/employees"/>">To the employees list</a>
         </h1>
-<br/>
+    </div>
     </body>
 </html>

@@ -14,13 +14,15 @@
 </head>
     <body>
 
-    <div id="add">
+
+<div class="wrapperTable">
+<div id="add">
     <c:url var="addAction" value="/employee/add"/>
 
     <br>
     <h3>Add a new employee</h3>
     <form:form action="${addAction}" modelAttribute="employee">
-        <table>
+        <table class="table">
             <c:if test="${!empty employee.name}">
                 <tr>
                     <td>
@@ -100,6 +102,7 @@
 <br>
 <a href="/">Back to main menu</a>
 <br>
+        </div>
         </div>
     </body>
 </html>

@@ -13,6 +13,7 @@
 
 </head>
 <body>
+<div class="searchWrapper">
 <h1>Search results</h1>
 
 <c:choose>
@@ -51,5 +52,6 @@
   <form:input path="name"/>
 
 </form:form>
+</div>
 </body>
 </html>
