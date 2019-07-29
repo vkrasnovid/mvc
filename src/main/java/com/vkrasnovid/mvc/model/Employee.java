@@ -1,8 +1,18 @@
 package com.vkrasnovid.mvc.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String name;
+
     private Integer age;
 
     public Long getId() {
@@ -29,17 +39,15 @@ public class Employee {
         this.age = age;
     }
 
-    public String getEdit()
-    {
+    public String getEdit() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("<a href=\"/edit/" + this.getId() + "\">Edit</a>");
-        return  new String(stringBuilder);
+        stringBuilder.append("<a href=\"/edit/").append(this.getId()).append("\">Edit</a>");
+        return new String(stringBuilder);
     }
 
-    public String getDelete()
-    {
+    public String getDelete() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("<a href=\"/remove/" + this.getId() + "\">Delete</a>");
-        return  new String(stringBuilder);
+        stringBuilder.append("<a href=\"/remove/").append(this.getId()).append("\">Delete</a>");
+        return new String(stringBuilder);
     }
 }
